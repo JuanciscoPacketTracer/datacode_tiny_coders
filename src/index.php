@@ -41,45 +41,36 @@ require_once 'includes/header.php';
                 </li>
             </ul>
 
-            <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#loginPanel">
-                <i class="bi bi-person-circle fs-5"></i>
-            </button>
+            <!-- Login como dropdown, dentro del navbar -->
+            <div class="dropdown login-dropdown">
+                <button class="btn login-icon-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-person-circle"></i>
+                </button>
+
+                <div class="dropdown-menu dropdown-menu-end login-panel-pop p-3">
+                    <h6 class="mb-3">
+                        <i class="bi bi-person-circle me-2"></i>Iniciar sesión
+                    </h6>
+                    <form>
+                        <div class="mb-2">
+                            <label class="form-label small mb-1">Matrícula</label>
+                            <input type="text" class="form-control form-control-sm">
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label small mb-1">Contraseña</label>
+                            <input type="password" class="form-control form-control-sm">
+                        </div>
+                        <button type="submit" class="btn btn-login btn-sm w-100">Iniciar Sesión</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
 
-<!-- Panel deslizante con el login -->
-<div class="offcanvas offcanvas-end login-offcanvas" tabindex="-1" id="loginPanel">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title">
-            <i class="bi bi-person-circle me-2"></i>Iniciar sesión
-        </h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-        <form>
-            <div class="mb-3">
-                <label class="form-label">Matricula</label>
-                <div class="input-group">
-                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                    <input type="matricula" class="form-control">
-                </div>
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label">Contraseña</label>
-                <div class="input-group">
-                    <span class="input-group-text"><i class="bi bi-lock"></i></span>
-                    <input type="password" class="form-control" placeholder="••••••••">
-                </div>
-            </div>
-            <button type="submit" class="btn btn-login w-100">Login</button>
-        </form>
-    </div>
-</div>
-
 <!-- Carrusel de imágenes -->
-<div id="carruselPrincipal" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true">   
+<div id="carruselPrincipal" class="carousel slide" data-bs-ride="carousel">   
 
     <!-- Indicadores (puntitos abajo) -->
     <div class="carousel-indicators">

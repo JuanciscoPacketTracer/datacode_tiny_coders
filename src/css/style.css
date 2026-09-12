@@ -40,44 +40,35 @@ h1 {
 
 /* ============================
    PANEL DE LOGIN - PERSONALIZABLE
-   Cambia estos valores para ajustar todo el panel
+/* ============================
+   PANEL DE LOGIN TIPO POPOVER
    ============================ */
-.login-offcanvas {
-    --login-color-principal: #9C2C53;   /* color de acentos (botón, links, header) */
-    --login-color-texto-header: #ffffff; /* color del texto del título */
-    --login-ancho: 380px;                /* ancho del panel */
+.login-panel-pop {
+    --login-color-principal: #6d1b1b;
+    width: 280px;
+    border-top: 3px solid var(--login-color-principal);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.login-offcanvas {
-    width: var(--login-ancho) !important;
-}
-
-.login-offcanvas .offcanvas-header {
-    background-color: var(--login-color-principal);
-    color: var(--login-color-texto-header);
-}
-
-.login-offcanvas .offcanvas-title {
-    color: var(--login-color-texto-header);
+.login-panel-pop h6 {
+    color: var(--login-color-principal);
     font-weight: 600;
 }
 
 .btn-login {
-    background-color: var(--login-color-principal);
+    background-color: #6d1b1b;
     color: #fff;
     font-weight: 600;
     border: none;
-    padding: 10px;
-    transition: background-color 0.2s ease;
 }
 
 .btn-login:hover {
-    background-color: color-mix(in srgb, var(--login-color-principal) 85%, black);
+    background-color: #5a1616;
     color: #fff;
 }
 
 .link-custom {
-    color: var(--login-color-principal);
+    color: #6d1b1b;
     text-decoration: none;
 }
 
@@ -85,6 +76,51 @@ h1 {
     text-decoration: underline;
 }
 
-.login-offcanvas .input-group-text {
-    background-color: #f1f1f1;
+/* Texto más grande y separado en el menú de navegación */
+.navbar-nav .nav-link {
+    font-size: 1.15rem;      /* tamaño del texto */
+    margin-right: 25px;      /* separación entre cada uno */
+    font-weight: 500;        /* un poco más grueso, opcional */
+}
+
+/* Quita el margen extra del último para que no quede desbalanceado */
+.navbar-nav .nav-item:last-child .nav-link {
+    margin-right: 0;
+}
+
+/* Texto más grande y separado en el menú de navegación */
+.navbar-nav .nav-link {
+    font-size: 2rem;      /* tamaño del texto */
+    margin-right: 70px;      /* separación entre cada uno */
+    margin-left: 80px;
+    font-weight: 500;        /* un poco más grueso, opcional */
+}
+
+/* Quita el margen extra del último para que no quede desbalanceado */
+.navbar-nav .nav-item:last-child .nav-link {
+    margin-right: 0;
+}
+
+/* Ícono de login sin borde cuadrado */
+.login-icon-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 3rem;
+    padding: 0;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 80%;
+    transition: background-color 0.2s ease;
+    margin-right: 40px;
+}
+
+.login-icon-btn:hover,
+.login-icon-btn:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    box-shadow: none;
 }
